@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'mechanize'
+require 'cgi'
+
+agent = Mechanize.new
+agent.get "http://www.google.com/search?q=#{CGI::escape($* * ' ')}"
+
+if agent.page.root.text.index("No results found for")
+  puts 0
+else
+  puts agent.page.root.search("#subform_ctrl").search("b")[2].text
+  puts agent.page.search("h3.r a").map{ |l| l[:href] }
+end
+
+

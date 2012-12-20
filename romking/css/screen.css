@@ -1,0 +1,92 @@
+/************************************************
+* =GENERAL DEFINITIONS
+************************************************/
+body {
+	font-size: 12px;
+	font-family: "Century Gothic", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+/************************************************
+* =GENERAL
+************************************************/
+
+h1 {
+	width: 700px;
+	margin: 10px auto 10px auto;
+	font-weight: normal;
+	border: 0 solid #EEEEEE;
+	border-bottom-width: 1px;
+	text-align: center;
+}
+
+div#subheading {
+	text-align: center;
+}
+
+div#subheading a {
+	margin: 0 2px 0 2px;
+}
+
+a:link, a:visited, a:active {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+fieldset#romkingQueryFieldset {
+	width: 680px;
+	margin: 10px auto 0 auto;
+	border: 1px solid #EEEEEE;
+	border-radius: 3px;
+	padding: 10px;
+}
+
+fieldset#romkingQueryFieldset legend {
+	float: right;
+}
+
+div#romkingSearchResultPanel {
+	width: 680px;
+	margin: 10px auto 0 auto;
+	border: 1px solid #EEEEEE;
+	border-radius: 3px;
+	padding: 10px;
+}
+
+div#romkingSearchResultPanel h2 {
+	font-size: 1.4em;
+	border: 0 solid #EEEEEE;
+	border-bottom-width: 1px;
+	margin: 0 0 10px 0;
+	font-weight: normal;
+	font-style: italic;
+}
+
+div#romkingSearchResultPanel ol {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+div#romkingSearchResultPanel ol li {
+	margin: 0 0 5px 0;
+}
+
+div#romkingSearchResultPanel ol li h3 {
+	font-size: 1.4em;
+	border: 0 solid #EEEEEE;
+	border-bottom-width: 1px;
+	margin: 0;
+	font-weight: normal;
+}
+
+/************************************************
+* =FORM ELEMENTS
+************************************************/
+input#romkingQuery {
+	width: 100%;
+}

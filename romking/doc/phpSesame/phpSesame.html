@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class phpSesame</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class phpSesame</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This Class is an interface to Sesame. It connects and perform queries through http.</p>
+<p class="description"><p>This class requires Sesame running in a servlet container (tested on tomcat).  The class does not perform all the operation implemented in the sesame http api but  does the minimal work needed for hyperJournal. You can find more details about Sesame  and its HTTP API at www.openrdf.org</p><p>Based on the phesame library, http://www.hjournal.org/phesame/</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Alex Latchford</li>
+				<li><span class="field">version:</span> 0.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_lib---phpsesame---phpSesame.php.html">/lib/phpsesame/phpSesame.php</a> (line <span class="field">24</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<a href="#BINARY_TABLE" title="details" class="const-name">BINARY_TABLE</a> = 					<span class="var-type"> 'application/x-binary-rdf-results-table'</span>
+
+				</div>
+								<div class="const-title">
+					<a href="#BOOLEAN" title="details" class="const-name">BOOLEAN</a> = 					<span class="var-type"> 'text/boolean'</span>
+
+				</div>
+								<div class="const-title">
+					<a href="#N3" title="details" class="const-name">N3</a> = 					<span class="var-type"> 'text/rdf+n3'</span>
+
+				</div>
+								<div class="const-title">
+					<a href="#NTRIPLES" title="details" class="const-name">NTRIPLES</a> = 					<span class="var-type"> 'text/plain'</span>
+
+				</div>
+								<div class="const-title">
+					<a href="#RDFXML" title="details" class="const-name">RDFXML</a> = 					<span class="var-type"> 'application/rdf+xml'</span>
+
+				</div>
+								<div class="const-title">
+					<a href="#SPARQL_JSON" title="details" class="const-name">SPARQL_JSON</a> = 					<span class="var-type"> 'application/sparql-results+json'</span>
+
+				</div>
+								<div class="const-title">
+					<a href="#SPARQL_XML" title="details" class="const-name">SPARQL_XML</a> = 					<span class="var-type"> 'application/sparql-results+xml'</span>
+
+				</div>
+								<div class="const-title">
+					<a href="#TRIG" title="details" class="const-name">TRIG</a> = 					<span class="var-type"> 'application/x-trig'</span>
+
+				</div>
+								<div class="const-title">
+					<a href="#TRIX" title="details" class="const-name">TRIX</a> = 					<span class="var-type"> 'application/trix'</span>
+
+				</div>
+								<div class="const-title">
+					<a href="#TURTLE" title="details" class="const-name">TURTLE</a> = 					<span class="var-type"> 'application/x-turtle'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+									<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																				
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#append" title="details" class="method-name">append</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">'null'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$inputFormat</span> = <span class="var-default">self::RDFXML</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#appendFile" title="details" class="method-name">appendFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filePath</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">'null'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$inputFormat</span> = <span class="var-default">self::RDFXML</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">phpSesame</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$sesameUrl</span> = <span class="var-default">'http://localhost:8080/openrdf-sesame'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$repository</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#clear" title="details" class="method-name">clear</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../rOMking/phpSesame_SparqlRes.html">phpSesame_SparqlRes</a></span>
+										<a href="#contexts" title="details" class="method-name">contexts</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$resultFormat</span> = <span class="var-default">self::SPARQL_XML</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#deleteNS" title="details" class="method-name">deleteNS</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getNS" title="details" class="method-name">getNS</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../rOMking/phpSesame_SparqlRes.html">phpSesame_SparqlRes</a></span>
+										<a href="#listRepositories" title="details" class="method-name">listRepositories</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#overwrite" title="details" class="method-name">overwrite</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">'null'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$inputFormat</span> = <span class="var-default">self::RDFXML</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#overwriteFile" title="details" class="method-name">overwriteFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filePath</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">'null'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$inputFormat</span> = <span class="var-default">self::RDFXML</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../rOMking/phpSesame_SparqlRes.html">phpSesame_SparqlRes</a></span>
+										<a href="#query" title="details" class="method-name">query</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$resultFormat</span> = <span class="var-default">self::SPARQL_XML</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$queryLang</span> = <span class="var-default">'sparql'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$infer</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setNS" title="details" class="method-name">setNS</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$namespace</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setRepository" title="details" class="method-name">setRepository</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$rep</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#size" title="details" class="method-name">size</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">'null'</span>])
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodappend" id="append"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">append</span> (line <span class="line-number">188</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Appends data to the selected repository</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			append
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">'null'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$inputFormat</span> = <span class="var-default">self::RDFXML</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span><span class="var-description">: Data in the supplied format</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$context</span><span class="var-description">: The context the query should be run against</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$inputFormat</span><span class="var-description">: See class const definitions for supported formats.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodappendFile" id="appendFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">appendFile</span> (line <span class="line-number">214</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Appends data to the selected repository</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			appendFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filePath</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">'null'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$inputFormat</span> = <span class="var-default">self::RDFXML</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filePath</span><span class="var-description">: The filepath of data, can be a URL</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$context</span><span class="var-description">: The context the query should be run against</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$inputFormat</span><span class="var-description">: See class const definitions for supported formats.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">57</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">phpSesame</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$sesameUrl</span> = <span class="var-default">'http://localhost:8080/openrdf-sesame'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$repository</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sesameUrl</span><span class="var-description">: Sesame server connection string</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repository</span><span class="var-description">: The repository name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclear" id="clear"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">clear</span> (line <span class="line-number">402</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Clears the repository</p>
+<p class="description"><p>Removes all data from the selected repository from ALL contexts.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			clear
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcontexts" id="contexts"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">contexts</span> (line <span class="line-number">355</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a list of all the contexts in the repository.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../rOMking/phpSesame_SparqlRes.html">phpSesame_SparqlRes</a></span>
+		<span class="method-name">
+			contexts
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$resultFormat</span> = <span class="var-default">self::SPARQL_XML</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$resultFormat</span><span class="var-description">: Returned result format, see const definitions for supported list.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteNS" id="deleteNS"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">deleteNS</span> (line <span class="line-number">330</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes the the namespace for the specified prefix</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			deleteNS
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: Data in the supplied format</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetNS" id="getNS"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getNS</span> (line <span class="line-number">278</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the namespace URL for the supplied prefix</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The URL of the namespace</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getNS
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: Data in the supplied format</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlistRepositories" id="listRepositories"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">listRepositories</span> (line <span class="line-number">79</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a list of all the available repositories on the Sesame installation</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../rOMking/phpSesame_SparqlRes.html">phpSesame_SparqlRes</a></span>
+		<span class="method-name">
+			listRepositories
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodoverwrite" id="overwrite"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">overwrite</span> (line <span class="line-number">227</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Overwrites data in the selected repository, can optionally take a context parameter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			overwrite
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">'null'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$inputFormat</span> = <span class="var-default">self::RDFXML</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span><span class="var-description">: Data in the supplied format</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$context</span><span class="var-description">: The context the query should be run against</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$inputFormat</span><span class="var-description">: See class const definitions for supported formats.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodoverwriteFile" id="overwriteFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">overwriteFile</span> (line <span class="line-number">251</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Overwrites data in the selected repository, can optionally take a context parameter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			overwriteFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filePath</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">'null'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$inputFormat</span> = <span class="var-default">self::RDFXML</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filePath</span><span class="var-description">: The filepath of data, can be a URL</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$context</span><span class="var-description">: The context the query should be run against</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$inputFormat</span><span class="var-description">: See class const definitions for supported formats.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodquery" id="query"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">query</span> (line <span class="line-number">158</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Performs a simple Query.</p>
+<p class="description"><p>Performs a query and returns the result in the selected format. Throws an  exception if the query returns an error.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../rOMking/phpSesame_SparqlRes.html">phpSesame_SparqlRes</a></span>
+		<span class="method-name">
+			query
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$resultFormat</span> = <span class="var-default">self::SPARQL_XML</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$queryLang</span> = <span class="var-default">'sparql'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$infer</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: String used for query</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$resultFormat</span><span class="var-description">: Returned result format, see const definitions for supported list.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$queryLang</span><span class="var-description">: Language used for querying, SPARQL and SeRQL supported</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$infer</span><span class="var-description">: Use inference in the query</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetNS" id="setNS"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setNS</span> (line <span class="line-number">305</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the the namespace for the specified prefix</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setNS
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$namespace</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: Data in the supplied format</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$namespace</span><span class="var-description">: The context the query should be run against</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRepository" id="setRepository"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setRepository</span> (line <span class="line-number">69</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Selects a repository to work on</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRepository
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$rep</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rep</span><span class="var-description">: The repository name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsize" id="size"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">size</span> (line <span class="line-number">379</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the size of the repository</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			size
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">'null'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$context</span><span class="var-description">: The context the query should be run against</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constBINARY_TABLE" id="BINARY_TABLE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<span class="const-title">
+			<span class="const-name">BINARY_TABLE</span>
+			 = <span class="const-default"> 'application/x-binary-rdf-results-table'</span>
+			(line <span class="line-number">29</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constBOOLEAN" id="BOOLEAN"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<span class="const-title">
+			<span class="const-name">BOOLEAN</span>
+			 = <span class="const-default"> 'text/boolean'</span>
+			(line <span class="line-number">30</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constN3" id="N3"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<span class="const-title">
+			<span class="const-name">N3</span>
+			 = <span class="const-default"> 'text/rdf+n3'</span>
+			(line <span class="line-number">36</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constNTRIPLES" id="NTRIPLES"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<span class="const-title">
+			<span class="const-name">NTRIPLES</span>
+			 = <span class="const-default"> 'text/plain'</span>
+			(line <span class="line-number">34</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constRDFXML" id="RDFXML"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<span class="const-title">
+			<span class="const-name">RDFXML</span>
+			 = <span class="const-default"> 'application/rdf+xml'</span>
+			(line <span class="line-number">33</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constSPARQL_JSON" id="SPARQL_JSON"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<span class="const-title">
+			<span class="const-name">SPARQL_JSON</span>
+			 = <span class="const-default"> 'application/sparql-results+json'</span>
+			(line <span class="line-number">28</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constSPARQL_XML" id="SPARQL_XML"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<span class="const-title">
+			<span class="const-name">SPARQL_XML</span>
+			 = <span class="const-default"> 'application/sparql-results+xml'</span>
+			(line <span class="line-number">27</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constTRIG" id="TRIG"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<span class="const-title">
+			<span class="const-name">TRIG</span>
+			 = <span class="const-default"> 'application/x-trig'</span>
+			(line <span class="line-number">38</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constTRIX" id="TRIX"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<span class="const-title">
+			<span class="const-name">TRIX</span>
+			 = <span class="const-default"> 'application/trix'</span>
+			(line <span class="line-number">37</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constTURTLE" id="TURTLE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<span class="const-title">
+			<span class="const-name">TURTLE</span>
+			 = <span class="const-default"> 'application/x-turtle'</span>
+			(line <span class="line-number">35</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
+
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 12 Mar 2012 15:40:15 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>
